@@ -1,0 +1,63 @@
+.hero-banner h1 {
+  font-size: 48px;
+}
+.hero-banner .btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 9;
+}
+.hero-banner .btn-primary {
+  color: #2f2f41;
+  background-color: rgba(1, 164, 121, 0.1);
+  border-color: #01a479;
+}
+.hero-banner .btn:before {
+  content: "";
+  background: #ed5561;
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+.hero-banner .btn:hover:before {
+  width: 100%;
+}
+
+
+
+#img-col {
+  position: relative;
+  right: -200%;
+  opacity: 0;
+  animation: animImgCol .8s forwards;
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+
+#text-col {
+  position: relative;
+  left: -200%;
+  opacity: 0;
+  animation: animTextCol .8s forwards;
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+
+
+@keyframes animImgCol {
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes animTextCol {
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}

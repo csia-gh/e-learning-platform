@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "lms-str": {
+      "hosting": {
+        "app": [
+          "csia-lms"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "lms-str"
+  }
+}

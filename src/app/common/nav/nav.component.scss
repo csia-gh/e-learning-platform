@@ -1,0 +1,31 @@
+.nav-link--my-courses {
+  border: 1px solid purple !important;
+  color: purple !important;
+  opacity: 0.6 !important;
+}
+.nav-link--my-courses.active {
+  opacity: 1 !important;
+}
+
+.nav-link--my-courses:hover {
+  opacity: 1 !important;
+}
+
+.nav-link--my-profile {
+  border: 1px solid slateblue !important;
+  color: slateblue !important;
+  opacity: 0.6 !important;
+}
+.nav-link--my-profile.active {
+  opacity: 1 !important;
+}
+.nav-link--my-profile:hover {
+  opacity: 1 !important;
+}
+
+@media (max-width: 990px) {
+  .nav-link--my-courses,
+  .nav-link--my-profile {
+    border: none !important;
+  }
+}

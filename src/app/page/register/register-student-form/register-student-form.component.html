@@ -1,0 +1,76 @@
+<app-alert *ngIf="showAlert" [color]="alertColor">
+  {{ alertMsg }}
+  </app-alert>
+
+ <form  [formGroup]="registerForm" (ngSubmit)="register()">
+   <!-- Username -->
+   <div class="mb-3">
+     <label class="form-label">Username</label>
+     <app-input [control]="username" placeholder="Enter Username"></app-input>
+   </div>
+   <!-- Email -->
+   <div class="mb-3">
+     <label class="form-label">Email</label>
+     <app-input
+       [control]="email"
+       type="email"
+       placeholder="Enter Email"
+     ></app-input>
+   </div>
+   <!-- First Name -->
+   <div class="mb-3">
+     <label class="form-label">First Name</label>
+     <app-input
+       [control]="firstName"
+       placeholder="Enter Frist Name"
+     ></app-input>
+   </div>
+
+    <!-- Last Name -->
+    <div class="mb-3">
+      <label class="form-label">Last Name</label>
+      <app-input
+        [control]="lastName"
+        placeholder="Enter Last Name"
+      ></app-input>
+    </div>
+
+    <!-- Bio -->
+    <div class="mb-3">
+      <label class="form-label">Bio</label>
+      <app-input
+        [control]="bio"
+        type="textarea"
+        placeholder="Talk a little bit about what your current role is, the scope of it, and perhaps a big recent accomplishment."
+      ></app-input>
+    </div>
+
+   <!-- Password -->
+   <div class="mb-3">
+     <label class="form-label">Password</label>
+     <app-input
+       [control]="password"
+       type="password"
+       placeholder="Enter Password"
+     ></app-input>
+   </div>
+   <!-- Confirm Password -->
+   <div class="mb-3">
+     <label class="form-label">Confirm Password</label>
+     <app-input
+       [control]="confirmPassword"
+       type="password"
+       placeholder="Confirm Password"
+     ></app-input>
+   </div>
+
+   <div class="d-grid gap-2">
+     <button
+       type="submit"
+       class="btn btn-outline-secondary border btn-lg"
+       [disabled]="registerForm.invalid"
+     >
+       Submit
+     </button>
+   </div>
+ </form>
